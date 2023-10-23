@@ -54,7 +54,6 @@ func GCRBackoff() retry.Backoff {
 	return retry.Backoff{
 		Duration: 6 * time.Second,
 		Factor:   10.0,
-		Jitter:   0.1,
 		Steps:    3,
 		Cap:      1 * time.Hour,
 	}
